@@ -9,21 +9,39 @@ const pluginsConfig = require('./plugins/plugins.config.prod');
 
 
 module.exports = webpackMerge(
-    resolveConfig,
-    rulesConfig,
-    optimiztaionConfig,
-    serverConfig,
-    pluginsConfig,
-    {
-        context: path.resolve(__dirname, 'src'),
-        mode: 'production',
-        devtool: false,
-        entry: {
-            main: path.join(process.cwd(), 'src/index.tsx'),
-        },
-        output: {
-            filename: '[name].[contenthash].js',
-            path: path.join(process.cwd(), 'build'),
-        },
+  resolveConfig,
+  rulesConfig,
+  optimiztaionConfig,
+  serverConfig,
+  pluginsConfig,
+  {
+    context: path.resolve(__dirname, 'src'),
+    mode: 'production',
+    devtool: false,
+    entry: {
+      main: path.join(process.cwd(), 'src/index.tsx'),
     },
+    output: {
+      filename: '[name].[contenthash].js',
+      path: path.join(process.cwd(), 'build'),
+    },
+    module: {
+      rules: [
+        {
+          test: /\.m?js$/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-transform-object-assign'],
+            },
+          },
+        },
+        {
+          test: /\.js$/,
+          loader: 'webpack-remove-debug',
+        },
+      ],
+    },
+  },
 );

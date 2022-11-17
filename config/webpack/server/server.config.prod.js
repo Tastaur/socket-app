@@ -1,7 +1,8 @@
 module.exports = {
-    devServer: {
-        port: 1888,
-        open: true,
-        hot: false,
-    },
-}
+  devServer: {
+    port: 1888,
+    open: true,
+    hot: false,
+    historyApiFallback: true,
+  },
+};

@@ -13,21 +13,21 @@ const outputPath = path.join(process.cwd(), 'build');
 
 
 module.exports = webpackMerge(
-    resolveConfig,
-    rulesConfig,
-    optimiztaionConfig,
-    serverConfig,
-    pluginsConfig,
-    {
-        context: path.resolve(__dirname, 'src'),
-        mode: 'development',
-        devtool: 'source-map',
-        entry: {
-            main: entryPath,
-        },
-        output: {
-            filename: '[name].[contenthash].js',
-            path: outputPath,
-        },
+  resolveConfig,
+  rulesConfig,
+  optimiztaionConfig,
+  serverConfig,
+  pluginsConfig,
+  {
+    context: path.resolve(__dirname, 'src'),
+    mode: 'development',
+    devtool: 'eval-cheap-module-source-map',
+    entry: {
+      main: entryPath,
     },
+    output: {
+      filename: '[name].[contenthash].js',
+      path: outputPath,
+    },
+  },
 );

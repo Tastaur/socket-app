@@ -6,7 +6,7 @@ module.exports = {
     jest: true,
     es6: true,
   },
-  plugins: ['react', 'jsx-a11y', 'import'],
+  plugins: ['react', 'jsx-a11y', 'import', 'unused-imports'],
   parserOptions: {
     ecmaVersion: 2021,
     project: ['./tsconfig.json'],
@@ -65,7 +65,7 @@ module.exports = {
       'newlines-between': 'always',
     }],
     'import/prefer-default-export': 'off',
-    '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }],
+    '@typescript-eslint/indent': 'warn',
     'jsx-a11y/anchor-is-valid': 'warn',
     'jsx-a11y/aria-props': 'error',
     'jsx-a11y/label-has-associated-control': ['error', {
@@ -78,6 +78,14 @@ module.exports = {
         some: ['nesting', 'id'],
       },
     }],
+    'space-before-blocks': 'off',
+    '@typescript-eslint/space-before-blocks': 'off',
+    'no-unused-vars': 'off',
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      { 'vars': 'all', 'varsIgnorePattern': '^_', 'args': 'after-used', 'argsIgnorePattern': '^_' },
+    ],
     'jsx-a11y/mouse-events-have-key-events': 'warn',
     'jsx-a11y/role-has-required-aria-props': 'error',
     'jsx-a11y/role-supports-aria-props': 'error',
@@ -106,7 +114,7 @@ module.exports = {
       custom: 'ignore',
       exceptions: ['div', 'circle'],
     }],
-    'react/state-in-constructor': ['error', 'always'],
+    'react/state-in-constructor': ['off', 'always'],
     'react/prop-types': 'off',
     'react/static-property-placement': ['error', 'static public field'],
     'react/no-array-index-key': 'off',
@@ -118,17 +126,13 @@ module.exports = {
     yoda: ['error', 'always', { onlyEquality: true }],
     'no-underscore-dangle': 'off',
     '@typescript-eslint/type-annotation-spacing': 'error',
-    "@typescript-eslint/no-unused-expressions": "off",
-    "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": [
-      "warn",
-      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
-    ],
-    "@typescript-eslint/no-unused-vars": [
-      "error",
+    '@typescript-eslint/no-unused-expressions': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
       {
-        "argsIgnorePattern": "^_"
-      }
+        'argsIgnorePattern': '^_',
+      },
     ],
     '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
     '@typescript-eslint/member-delimiter-style': ['error', {

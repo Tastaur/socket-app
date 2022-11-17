@@ -1,5 +1,4 @@
 {
-  "exclude": ["**/node_modules", "**/.*/"],
   "compilerOptions": {
     "experimentalDecorators": true,
     "lib": [
@@ -7,7 +6,7 @@
       "DOM",
       "DOM.Iterable"
     ],
-    "outDir": "app",
+    "outDir": "build",
     "jsx": "react",
     "module": "ESNext",
     "baseUrl": "src",
@@ -21,6 +20,7 @@
     "noImplicitAny": false,
     "noImplicitThis": true,
     "strictNullChecks": true,
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "target": "es6",
     "noUncheckedIndexedAccess": true,

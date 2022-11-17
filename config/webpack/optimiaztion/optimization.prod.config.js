@@ -1,12 +1,12 @@
 module.exports = {
-    optimization: {
-        splitChunks: {
-            chunks: "all"
-        },
-        runtimeChunk: 'single',
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
     },
-    performance: {
-        maxEntrypointSize: 512000,
-        maxAssetSize: 512000
-    }
-}
+    runtimeChunk: 'single',
+  },
+  performance: {
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
+};
