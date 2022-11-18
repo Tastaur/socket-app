@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Box, styled, Tab, Tabs } from '@mui/material';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import { PAGE_TABS, PAGE_TABS_LINK } from './constants';
 
@@ -22,6 +22,8 @@ export const PageTabs: FC<PageTabsProps> = ({ setCurrentPage, currentPage }) => 
           <Tabs value={currentPage} onChange={(_, newValue) => setCurrentPage(newValue)}>
               {Object.values(PAGE_TABS).map((item) => (
                   <Tab
+                  component={Link}
+                  to={PAGE_TABS_LINK[item]}
                   onClick={() => {
                     history.push(PAGE_TABS_LINK[item]);
                   }}

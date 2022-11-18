@@ -3,7 +3,6 @@ import { StyledEngineProvider, ThemeProvider } from '@mui/material';
 import { BrowserRouter } from 'react-router-dom';
 
 import { ErrorBoundary } from '../components/common/ErrorBoundary';
-import { WebSocketContext } from '../context/WebSocketContext';
 import { MainContainer } from '../containers/MainContainer';
 import { theme } from '../theme';
 
@@ -14,9 +13,7 @@ export const App = () => {
           <StyledEngineProvider injectFirst>
               <ThemeProvider theme={theme}>
                   <ErrorBoundary>
-                      <WebSocketContext>
-                          <MainContainer/>
-                      </WebSocketContext>
+                      <MainContainer/>
                   </ErrorBoundary>
               </ThemeProvider>
           </StyledEngineProvider>

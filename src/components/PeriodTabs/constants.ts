@@ -8,6 +8,6 @@ export enum PERIOD_TABS {
 export const PERIOD_TABS_NAME_RECORD: Record<PERIOD_TABS, string> = {
   [PERIOD_TABS.ONE_MINUTE]: '1 Minute',
   [PERIOD_TABS.FIVE_MINUTE]: '5 Minutes',
-  [PERIOD_TABS.ONE_WEEK]: '1 Hour',
-  [PERIOD_TABS.ONE_HOUR]: '1 Week',
+  [PERIOD_TABS.ONE_WEEK]: '1 Week',
+  [PERIOD_TABS.ONE_HOUR]: '1 Hour',
 };

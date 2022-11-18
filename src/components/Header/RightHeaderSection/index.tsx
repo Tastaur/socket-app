@@ -20,7 +20,7 @@ export const RightHeaderSection: FC<RightHeaderSectionProps> = ({
 }) => {
   const isPositive = percentChange > 0 && change > 0;
   const currentTypographyColor = isPositive ? 'green' : 'red';
-  const sign = isPositive ? '+' : '-';
+  const sign = isPositive ? '+' : '';
   return (
       <Stack direction='column'>
           <Stack gap={2} direction='row'  justifyContent='space-between'>

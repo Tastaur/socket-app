@@ -4,16 +4,10 @@ import React, {
 
 import { Nullable } from '../../globalTypes';
 import { getSocketMessage } from './utils';
-import { bitcoinKey, WEB_SOCKET_MESSAGE } from '../../globalConstant';
+import { bitcoinKey, WEB_SOCKET_MESSAGE, WEB_SOCKET_URL } from '../../globalConstant';
 import { parseJsonSafely } from '../../utils';
-import { BitcoinData } from './types';
+import { BitcoinData, WebSocketContextInterface } from './types';
 
-
-export interface WebSocketContextInterface {
-  data: Nullable<BitcoinData>,
-  isLoading: boolean,
-  error: Nullable<Error>,
-}
 
 const Context = createContext<Nullable<WebSocketContextInterface>>(null);
 
@@ -34,7 +28,7 @@ export const WebSocketContext: FC = ({
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Nullable<Error>>(null);
   useEffect(() => {
-    const socket = new WebSocket('wss://wstest.fxempire.com?token=btctothemoon');
+    const socket = new WebSocket(WEB_SOCKET_URL);
     socket.onopen = () => {
       socket.send(getSocketMessage(WEB_SOCKET_MESSAGE.SUBSCRIBE));
     };
