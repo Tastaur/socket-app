@@ -3,3 +3,4 @@
 server.js
 .eslintrc.js
 /coverage
+/config

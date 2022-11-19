@@ -23,3 +23,10 @@ export const LIFECYCLE_PERIOD_CACHE_TIME: Record<PERIOD_TABS, number> = {
   [PERIOD_TABS.ONE_HOUR]: hourInMillisecond,
   [PERIOD_TABS.ONE_WEEK]: weekInMillisecond,
 };
+
+export const DATE_FORMAT_BY_PERIOD: Record<PERIOD_TABS, string> = {
+  [PERIOD_TABS.FIVE_MINUTE]: 'k:mm',
+  [PERIOD_TABS.ONE_MINUTE]: 'k:mm',
+  [PERIOD_TABS.ONE_HOUR]: 'k:mm',
+  [PERIOD_TABS.ONE_WEEK]: 'MMM dd',
+};

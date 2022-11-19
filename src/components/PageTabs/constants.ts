@@ -1,9 +1,9 @@
 export enum PAGE_TABS {
-  Overview = 'Overview',
-  History = 'History',
+  Overview = '/overview',
+  History = '/history',
 }
 
-export const PAGE_TABS_LINK: Record<PAGE_TABS, string> = {
-  [PAGE_TABS.History]: '/history',
-  [PAGE_TABS.Overview]: '/overview',
+export const PAGE_TAB_NAME: Record<PAGE_TABS, string> = {
+  [PAGE_TABS.History]: 'History',
+  [PAGE_TABS.Overview]: 'Overview',
 };

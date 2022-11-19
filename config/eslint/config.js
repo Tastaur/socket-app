@@ -34,37 +34,8 @@ module.exports = {
     },
     {
       'files': [
-        './app/store/**/*',
-      ],
-      'rules': {
-        'no-param-reassign': [
-          'error',
-          {
-            'props': true,
-            'ignorePropertyModificationsFor': [
-              'state',
-            ],
-          },
-        ],
-      },
-    },
-    {
-      'files': [
         '*.test.ts',
       ],
-      'rules': {
-        '@typescript-eslint/naming-convention': [
-          'error',
-          {
-            'selector': 'objectLiteralProperty',
-            'format': [
-              'camelCase',
-            ],
-            'filter': 'esModule',
-            'leadingUnderscore': 'requireDouble',
-          },
-        ],
-      },
     },
   ],
   'rules': {
@@ -85,8 +56,8 @@ module.exports = {
         'trailingUnderscore': 'allow',
       },
     ],
-    '@typescript-eslint/lines-between-class-members': 'off',
     'object-property-newline': 'off',
+    '@typescript-eslint/lines-between-class-members': 'off',
     'quote-props': 'off',
     'yoda': [
       'error',
@@ -107,6 +78,13 @@ module.exports = {
       },
     ],
     'indent': [
+      'error',
+      2,
+      {
+        'SwitchCase': 1,
+      },
+    ],
+    '@typescript-eslint/indent': [
       'error',
       2,
       {
@@ -253,7 +231,10 @@ module.exports = {
       },
     ],
     'react/forbid-prop-types': 'off',
-    'react/jsx-indent': 'warn',
+    'react/jsx-indent': [
+      'error',
+      2
+    ],
     'react/no-array-index-key': 'warn',
     'react/jsx-fragments': [
       'error',
@@ -268,6 +249,11 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/no-throw-literal': 'off',
+    '@typescript-eslint/space-before-blocks': ['error', {
+      'functions': 'never',
+      'keywords': 'never',
+      'classes': 'always',
+    }],
   },
   'globals': {
     'Generator': true,

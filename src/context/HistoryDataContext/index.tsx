@@ -16,21 +16,19 @@ const Context = createContext<Nullable<HistoryContextResponse>>(null);
 export const useHistoryDataContext = () => {
   const context = useContext(Context);
   
-  if (null === context) {
+  if (null === context){
     throw new Error('useDndContext must be used within DndContext');
   }
   
   return context;
 };
 
-export interface HistoryDataContextProp {
-  currentPeriod: PERIOD_TABS,
-}
 
-export const HistoryDataContext: FC<HistoryDataContextProp> = ({
+export const HistoryDataContext: FC = ({
   children,
-  currentPeriod,
 }) => {
+  const [currentPeriod, setCurrentPeriod] = useState<PERIOD_TABS>(PERIOD_TABS.ONE_HOUR);
+  
   const [data, setCurrentData] = useState<HistoryItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<Nullable<Error>>(null);
@@ -41,14 +39,14 @@ export const HistoryDataContext: FC<HistoryDataContextProp> = ({
     setIsLoading(true);
     const dataInStorage = await localStorage.getItem(localStorageKey);
     const parsedDataFromStorage = validateCachedData(currentPeriod, dataInStorage);
-    if (parsedDataFromStorage) {
+    if (parsedDataFromStorage){
       setCurrentData(parsedDataFromStorage);
       setIsLoading(false);
       return;
     }
     
     const payload = await getHistoryDataApi(HISTORY_ROUTS_BY_PERIOD[currentPeriod]);
-    if (payload instanceof Error) {
+    if (payload instanceof Error){
       setError(error);
       setIsLoading(false);
       return;
@@ -60,15 +58,15 @@ export const HistoryDataContext: FC<HistoryDataContextProp> = ({
     await localStorage.setItem(localStorageKey, JSON.stringify(preparedData));
     setCurrentData(payload.data);
     setIsLoading(false);
-  }, [currentPeriod]);
+  }, [currentPeriod, setCurrentData, setError, setIsLoading, error, localStorageKey]);
   
   useEffect(() => {
     requestData();
-  }, [currentPeriod]);
+  }, [currentPeriod, requestData]);
   
   return (
-      <Context.Provider value={{ data, error, isLoading }}>
-          {children}
-      </Context.Provider>
+    <Context.Provider value={{ data, error, isLoading, currentPeriod, setCurrentPeriod }}>
+      {children}
+    </Context.Provider>
   );
 };

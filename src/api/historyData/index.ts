@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import { HISTORY_DATA_URL } from '../../globalConstant';
-import { HistoryContextData } from '../../context/HistoryDataContext/types';
+import { WithData } from '../../context/HistoryDataContext/types';
 
 
 export interface GetHistoryDataApiPayload {
@@ -15,7 +15,7 @@ const historyDataApiInstance = axios.create({
 });
 
 export const getHistoryDataApi =  ({ aggregateCount, rangeRoute }: GetHistoryDataApiPayload) =>{
-  return historyDataApiInstance.get<HistoryContextData>(`/${rangeRoute}`, {
+  return historyDataApiInstance.get<WithData>(`/${rangeRoute}`, {
     params:{
       aggregate: aggregateCount,
       limit: 30,

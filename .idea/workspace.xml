@@ -2,31 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ced6187-1425-42b1-aa59-fcc31a4104ce" name="Changes" comment="ADD Charts">
-      <change afterPath="$PROJECT_DIR$/src/components/Overview/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Overview/lazy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Table/lazy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/GlobalOverride/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Overview/utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/colors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/components.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/expand-theme.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme/palette.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintignore" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/eslint/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/eslint/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack/config.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/config.prod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack/optimiaztion/optimization.dev.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/optimiaztion/optimization.dev.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack/plugins/plugins.config.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/plugins/plugins.config.dev.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/historyData/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/historyData/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/LeftHeaderSection/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/LeftHeaderSection/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/RightHeaderSection/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/RightHeaderSection/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainLayout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainLayout/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Overview/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Overview/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageTabs/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageTabs/constants.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageTabs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageTabs/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PeriodTabs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PeriodTabs/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/hooks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/hooks.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Table/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/ErrorBoundary/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/ErrorBoundary/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/HeaderContainer/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/HeaderContainer/lazy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/lazy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MainContainer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainLayout/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/constant.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/WebSocketContext/_test/utils.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/WebSocketContext/_test/utils.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/WebSocketContext/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/WebSocketContext/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/globalConstant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/globalConstant.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/parseJsonSafely/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/parseJsonSafely/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,27 +66,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.nodejs.core.library.configured.version": "16.14.0",
-    "javascript.nodejs.core.library.typings.version": "16.18.3",
-    "last_opened_file_path": "/home/tastaur/Documents/pet/app-socket/src/context",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/home/tastaur/Documents/pet/app-socket/node_modules/jest",
-    "nodejs_interpreter_path": "/home/tastaur/.nvm/versions/node/v16.14.0/bin/node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.tslint",
-    "ts.external.directory.path": "/home/tastaur/Documents/pet/app-socket/node_modules/typescript/lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.14.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/tastaur/Documents/pet/app-socket/src/context&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/home/tastaur/Documents/pet/app-socket/node_modules/jest&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;/home/tastaur/.nvm/versions/node/v16.14.0/bin/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/tastaur/Documents/pet/app-socket/node_modules/typescript/lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/context" />
@@ -90,31 +101,15 @@
       <recent name="$PROJECT_DIR$/src/utils/parseJsonSafely" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.ts">
-    <configuration name="parseJsonSafely test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.lint:fix">
+    <configuration name="lint:eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint:eslint" />
+      </scripts>
       <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/utils/parseJsonSafely/_test/parseJsonSafely.test.ts" />
-      <test-names>
-        <test-name value="parseJsonSafely test" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="websocketContext utils test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/context/WebSocketContext/_test/utils.test.ts" />
-      <test-names>
-        <test-name value="websocketContext utils test" />
-      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -122,6 +117,16 @@
       <command value="run" />
       <scripts>
         <script value="lint:fix" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -149,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.ts" />
         <item itemvalue="npm.lint:fix" />
         <item itemvalue="npm.test" />
-        <item itemvalue="Jest.websocketContext utils test" />
-        <item itemvalue="Jest.parseJsonSafely test" />
+        <item itemvalue="npm.ts" />
+        <item itemvalue="npm.lint:eslint" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +178,27 @@
       <workItem from="1668713654192" duration="13488000" />
       <workItem from="1668763745906" duration="608000" />
       <workItem from="1668765039279" duration="16948000" />
-      <workItem from="1668806040817" duration="12341000" />
+      <workItem from="1668806040817" duration="12718000" />
+      <workItem from="1668848667317" duration="89000" />
+      <workItem from="1668848845904" duration="358000" />
+      <workItem from="1668849214721" duration="299000" />
+      <workItem from="1668849524636" duration="97000" />
+      <workItem from="1668849632657" duration="163000" />
+      <workItem from="1668849808355" duration="62000" />
+      <workItem from="1668849882102" duration="94000" />
+      <workItem from="1668849987147" duration="64000" />
+      <workItem from="1668850062718" duration="81000" />
+      <workItem from="1668850155833" duration="156000" />
+      <workItem from="1668850323618" duration="175000" />
+      <workItem from="1668850509135" duration="46000" />
+      <workItem from="1668850566359" duration="708000" />
+      <workItem from="1668851285403" duration="216000" />
+      <workItem from="1668851512172" duration="72000" />
+      <workItem from="1668851595080" duration="339000" />
+      <workItem from="1668851949577" duration="85000" />
+      <workItem from="1668852045040" duration="47000" />
+      <workItem from="1668852103912" duration="4397000" />
+      <workItem from="1668857030302" duration="11288000" />
     </task>
     <task id="LOCAL-00001" summary="setup boilerplate">
       <created>1668670986171</created>
@@ -189,7 +214,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668728523421</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ADD Charts">
+      <created>1668818452641</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668818452641</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ADD Charts">
+      <created>1668818594903</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668818594903</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

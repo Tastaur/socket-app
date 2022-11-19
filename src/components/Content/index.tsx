@@ -10,22 +10,22 @@ const Table = lazy(() => import('../Table/lazy'));
 
 export const Content = () => {
   const { error } = useHistoryDataContext();
-  if (error) {
+  if (error){
     return null;
   }
   return (
-      <Suspense fallback={<CircularProgress/>}>
-          <Switch>
-              <Route path={'/history'} exact={true}>
-                  <Table/>
-              </Route>
-              <Route path={'/overview'} exact={true}>
-                  <Overview/>
-              </Route>
-              <Route path={'*'}>
-                  <Redirect to={'/history'}/>
-              </Route>
-          </Switch>
-      </Suspense>
+    <Suspense fallback={<CircularProgress/>}>
+      <Switch>
+        <Route path={'/history'} exact={true}>
+          <Table/>
+        </Route>
+        <Route path={'/overview'} exact={true}>
+          <Overview/>
+        </Route>
+        <Route path={'*'}>
+          <Redirect to={'/history'}/>
+        </Route>
+      </Switch>
+    </Suspense>
   );
 };

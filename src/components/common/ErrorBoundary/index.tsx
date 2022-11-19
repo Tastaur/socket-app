@@ -18,41 +18,39 @@ export class ErrorBoundary extends React.Component<IProps, State> {
     errorMessage: '',
     stackTrace: '',
   };
-  
-  componentDidCatch(error: Error, info: React.ErrorInfo) {
+    
+  componentDidCatch(error: Error, info: React.ErrorInfo){
     this.setState({
       hasError: true,
       errorMessage: error.message,
       stackTrace: info.componentStack.trim().split(/\r?\n/).map(str => str.trim()).join('\n'),
     });
   }
-  
-  renderError() {
+    
+  renderError(){
     const { errorMessage, stackTrace } = this.state;
     return (
-        <Fragment>
-            <Typography>
-                Something went wrong...
-            </Typography>
-            <Typography>
-                {errorMessage}
-            </Typography>
-            <Typography>
-                {stackTrace}
-            </Typography>
-        </Fragment>
+      <Fragment>
+        <Typography>
+          Something went wrong...
+        </Typography>
+        <Typography>
+          {errorMessage}
+        </Typography>
+        <Typography>
+          {stackTrace}
+        </Typography>
+      </Fragment>
     );
   }
-  
-  render() {
+    
+  render(){
     const { children } = this.props;
     const { hasError } = this.state;
-    
-    if (hasError) {
+    if (hasError){
       return this.renderError();
     }
-    
     return children;
   }
-  
+    
 }

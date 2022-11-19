@@ -1,3 +1,6 @@
+import { HistoryItem } from './context/HistoryDataContext/types';
+
+
 export const bitcoinKey = 'cc-btc-usd-cccagg';
 
 export enum WEB_SOCKET_MESSAGE {
@@ -15,3 +18,4 @@ export const minuteInMillisecond = 60 * 1000;
 export const hourInMillisecond = 60 * minuteInMillisecond;
 export const dayInMillisecond = 24 * hourInMillisecond;
 export const weekInMillisecond = 7 * dayInMillisecond;
+export const tableKeys: Array<keyof HistoryItem> = ['Date', 'High', 'Low', 'Open', 'Close'];

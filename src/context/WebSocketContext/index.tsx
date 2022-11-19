@@ -1,6 +1,4 @@
-import React, {
-  createContext, FC, useContext, useEffect, useState,
-} from 'react';
+import React, { createContext, FC, useContext, useEffect, useState } from 'react';
 
 import { Nullable } from '../../globalTypes';
 import { getSocketMessage } from './utils';
@@ -14,7 +12,7 @@ const Context = createContext<Nullable<WebSocketContextInterface>>(null);
 export const useWebSocketContext = () => {
   const context = useContext(Context);
   
-  if (null === context) {
+  if (null === context){
     throw new Error('useDndContext must be used within DndContext');
   }
   
@@ -58,8 +56,8 @@ export const WebSocketContext: FC = ({
   
   
   return (
-      <Context.Provider value={{ data, isLoading, error }}>
-          {children}
-      </Context.Provider>
+    <Context.Provider value={{ data, isLoading, error }}>
+      {children}
+    </Context.Provider>
   );
 };

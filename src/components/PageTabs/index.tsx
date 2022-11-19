@@ -1,8 +1,9 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Box, styled, Tab, Tabs } from '@mui/material';
 import { Link, useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router';
 
-import { PAGE_TABS, PAGE_TABS_LINK } from './constants';
+import { PAGE_TAB_NAME, PAGE_TABS } from './constants';
 
 
 const TabsWrapper = styled(Box)(({ theme }) => ({
@@ -10,30 +11,27 @@ const TabsWrapper = styled(Box)(({ theme }) => ({
   borderColor: theme.palette.divider,
 }));
 
-export interface PageTabsProps {
-  currentPage: PAGE_TABS,
-  setCurrentPage: (page: PAGE_TABS) => void,
-}
 
-export const PageTabs: FC<PageTabsProps> = ({ setCurrentPage, currentPage }) => {
+export const PageTabs = () => {
   const history = useHistory();
+  const location = useLocation();
   return (
-      <TabsWrapper>
-          <Tabs value={currentPage} onChange={(_, newValue) => setCurrentPage(newValue)}>
-              {Object.values(PAGE_TABS).map((item) => (
-                  <Tab
-                  component={Link}
-                  to={PAGE_TABS_LINK[item]}
-                  onClick={() => {
-                    history.push(PAGE_TABS_LINK[item]);
-                  }}
-                  value={item}
-                  key={item}
-                  label={item}
-                  id={item}
-                  aria-controls={`tab-${item}`}/>
-              ))}
-          </Tabs>
-      </TabsWrapper>
+    <TabsWrapper>
+      <Tabs value={location.pathname}>
+        {Object.values(PAGE_TABS).map((item) => (
+          <Tab
+            component={Link}
+            to={item}
+            onClick={() => {
+              history.push(item);
+            }}
+            value={item}
+            key={item}
+            label={PAGE_TAB_NAME[item]}
+            id={item}
+            aria-controls={`tab-${item}`}/>
+        ))}
+      </Tabs>
+    </TabsWrapper>
   );
 };

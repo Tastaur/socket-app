@@ -1,9 +1,7 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { CircularProgress, Stack, styled } from '@mui/material';
 
 import { PageTabs } from '../PageTabs';
-import { PAGE_TABS } from '../PageTabs/constants';
-import { PERIOD_TABS } from '../PeriodTabs/constants';
 import { PeriodTabs } from '../PeriodTabs';
 import { Content } from '../Content';
 import { HistoryDataContext } from '../../context/HistoryDataContext';
@@ -19,20 +17,18 @@ const StyledWrapper = styled(Stack)(({ theme }) => ({
 }));
 
 export const MainLayout = () => {
-  const [currentPage, setCurrentPage] = useState<PAGE_TABS>(PAGE_TABS.History);
-  const [currentPeriod, setCurrentPeriod] = useState<PERIOD_TABS>(PERIOD_TABS.ONE_HOUR);
   return (
-      <StyledWrapper gap={4}>
-          <Suspense fallback={<CircularProgress/>}>
-              <WebSocketContext>
-                  <Header/>
-              </WebSocketContext>
-              <PageTabs setCurrentPage={setCurrentPage} currentPage={currentPage}/>
-              <PeriodTabs currentPeriod={currentPeriod} setCurrentPeriod={setCurrentPeriod}/>
-              <HistoryDataContext currentPeriod={currentPeriod}>
-                  <Content/>
-              </HistoryDataContext>
-          </Suspense>
-      </StyledWrapper>
+    <StyledWrapper gap={4}>
+      <Suspense fallback={<CircularProgress/>}>
+        <WebSocketContext>
+          <Header/>
+        </WebSocketContext>
+        <HistoryDataContext>
+          <PageTabs/>
+          <PeriodTabs/>
+          <Content/>
+        </HistoryDataContext>
+      </Suspense>
+    </StyledWrapper>
   );
 };

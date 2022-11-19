@@ -1,6 +1,5 @@
 import React from 'react';
 import { CircularProgress, Stack, styled } from '@mui/material';
-
 import { useWebSocketContext } from 'context/WebSocketContext';
 
 import { LeftHeaderSection } from './LeftHeaderSection';
@@ -12,30 +11,40 @@ const HeaderWrapper = styled(Stack)(({ theme }) => ({
   padding: theme.spacing(2, 4),
 }));
 
+const PreloaderWrapper = styled(Stack)({
+  minHeight: 90,
+  width: '100%',
+});
+
 export const Header = () => {
   const { data, error, isLoading } = useWebSocketContext();
-  if (error) {
+  if (error){
     return <h2>Ooops!... something went wrong</h2>;
   }
   
   return <HeaderWrapper
-      aria-label={'header'}
-      direction={'row'}
-      justifyContent={'space-between'}
+    aria-label={'header'}
+    direction={'row'}
+    justifyContent={'space-between'}
   >
-      {isLoading || !data ?
-        (
-            <CircularProgress/>
-        ) : (
-            <>
-                <LeftHeaderSection lastUpdate={data.lastUpdate}/>
-                <RightHeaderSection
-                  last={data.last}
-                  change={data.change}
-                  percentChange={data.percentChange}
-                  quoteSymbol={data.quoteSymbol}
-              />
-            </>
-        )}
+    {isLoading || !data ?
+      (
+        <PreloaderWrapper
+          justifyContent={'center'}
+          alignItems={'center'}
+        >
+          <CircularProgress/>
+        </PreloaderWrapper>
+      ) : (
+        <React.Fragment>
+          <LeftHeaderSection lastUpdate={data.lastUpdate}/>
+          <RightHeaderSection
+            last={data.last}
+            change={data.change}
+            percentChange={data.percentChange}
+            quoteSymbol={data.quoteSymbol}
+          />
+        </React.Fragment>
+      )}
   </HeaderWrapper>;
 };
