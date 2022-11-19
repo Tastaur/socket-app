@@ -54,5 +54,5 @@ export class ErrorBoundary extends React.Component<IProps, State> {
     
     return children;
   }
-
+  
 }

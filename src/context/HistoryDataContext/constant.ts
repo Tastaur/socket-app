@@ -23,4 +23,3 @@ export const LIFECYCLE_PERIOD_CACHE_TIME: Record<PERIOD_TABS, number> = {
   [PERIOD_TABS.ONE_HOUR]: hourInMillisecond,
   [PERIOD_TABS.ONE_WEEK]: weekInMillisecond,
 };
-

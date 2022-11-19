@@ -32,10 +32,10 @@ export const WebSocketContext: FC = ({
     socket.onopen = () => {
       socket.send(getSocketMessage(WEB_SOCKET_MESSAGE.SUBSCRIBE));
     };
-    socket.addEventListener('open', ()=>{
+    socket.addEventListener('open', () => {
       setIsLoading(false);
     });
-    socket.onerror = () =>{
+    socket.onerror = () => {
       setData(null);
       setError(new Error('error in connection'));
     };

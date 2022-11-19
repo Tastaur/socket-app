@@ -1,13 +1,14 @@
 import React, { FC } from 'react';
 import { Stack, styled, Typography } from '@mui/material';
 import ArrowDropUpSharpIcon from '@mui/icons-material/ArrowDropUpSharp';
+import ArrowDropDownSharpIcon from '@mui/icons-material/ArrowDropDownSharp';
 
 import { BitcoinData } from 'context/WebSocketContext/types';
 
 
 type RightHeaderSectionProps = Pick<BitcoinData, 'last' | 'change' | 'percentChange' | 'quoteSymbol'>;
 
-const SubtitlePrice = styled(Stack)(({ theme }) =>({
+const SubtitlePrice = styled(Stack)(({ theme }) => ({
   padding: theme.spacing(0, 2),
 }));
 
@@ -19,22 +20,22 @@ export const RightHeaderSection: FC<RightHeaderSectionProps> = ({
   quoteSymbol,
 }) => {
   const isPositive = percentChange > 0 && change > 0;
-  const currentTypographyColor = isPositive ? 'green' : 'red';
+  const currentTypographyColor = isPositive ? 'rgb(80, 126, 17)' : 'rgb(217, 30, 24)';
   const sign = isPositive ? '+' : '';
   return (
       <Stack direction='column'>
-          <Stack gap={2} direction='row'  justifyContent='space-between'>
+          <Stack gap={2} direction='row' justifyContent='space-between'>
               <Typography color={currentTypographyColor} variant={'h3'}>
                   {isPositive
-                    ? <ArrowDropUpSharpIcon fontSize={'inherit'}  htmlColor={'inherit'}/>
-                    : <ArrowDropUpSharpIcon fontSize={'inherit'} htmlColor={'inherit'}/>}
+                    ? <ArrowDropUpSharpIcon fontSize={'inherit'} htmlColor={'inherit'}/>
+                    : <ArrowDropDownSharpIcon fontSize={'inherit'} htmlColor={'inherit'}/>}
               </Typography>
               <Typography variant='h3'>
                   {`${quoteSymbol}${last.toFixed(2)}`}
               </Typography>
           </Stack>
-          <SubtitlePrice direction='row' justifyContent='space-between' gap={1} >
-              <Typography variant='h5'  color={currentTypographyColor}>
+          <SubtitlePrice direction='row' justifyContent='space-between' gap={1}>
+              <Typography variant='h5' color={currentTypographyColor}>
                   {`${sign}${change.toFixed(2)}`}
               </Typography>
               <Typography variant='h5' color={currentTypographyColor}>
@@ -44,5 +45,3 @@ export const RightHeaderSection: FC<RightHeaderSectionProps> = ({
       </Stack>
   );
 };
-
-

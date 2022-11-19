@@ -1,6 +1,18 @@
 module.exports = {
   optimization: {
     runtimeChunk: 'single',
-    noEmitOnErrors: true,
+    moduleIds: 'deterministic',
+    splitChunks: {
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+          enforce: true,
+        },
+      },
+    },
   },
 };

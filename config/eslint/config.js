@@ -1,152 +1,275 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  extends: ['airbnb-typescript'],
-  env: {
-    browser: true,
-    jest: true,
-    es6: true,
+  'parser': '@typescript-eslint/parser',
+  'extends': 'airbnb-typescript',
+  'ignorePatterns': [
+    '*.svg',
+  ],
+  'env': {
+    'browser': true,
+    'jest': true,
+    'es6': true,
   },
-  plugins: ['react', 'jsx-a11y', 'import', 'unused-imports'],
-  parserOptions: {
-    ecmaVersion: 2021,
-    project: ['./tsconfig.json'],
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
+  'plugins': [
+    'react',
+    'react-hooks',
+    'jsx-a11y',
+    'import',
+  ],
+  'parserOptions': {
+    'ecmaVersion': 6,
+    'sourceType': 'module',
+    'ecmaFeatures': {
+      'jsx': true,
     },
+    'project': './tsconfig.json',
   },
-  settings: {
-    'import/resolver': {
-      node: {
-        path: ['src'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        moduleDirectory: ['node_modules', 'src/'],
-      },
-    },
-  },
-  overrides: [
+  'overrides': [
     {
-      files: [
-        './config/**/*',
-        './**/*.test.ts',
+      'files': [
+        './config/webpack/**/*.js',
       ],
-      rules: {
-        '@typescript-eslint/naming-convention': 'off',
+      'rules': {
+        'import/no-dynamic-require': 'off',
       },
     },
     {
-      files: ['*.ts', '*.tsx'],
-      parserOptions: {
-        project: ['./tsconfig.json'],
+      'files': [
+        './app/store/**/*',
+      ],
+      'rules': {
+        'no-param-reassign': [
+          'error',
+          {
+            'props': true,
+            'ignorePropertyModificationsFor': [
+              'state',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      'files': [
+        '*.test.ts',
+      ],
+      'rules': {
+        '@typescript-eslint/naming-convention': [
+          'error',
+          {
+            'selector': 'objectLiteralProperty',
+            'format': [
+              'camelCase',
+            ],
+            'filter': 'esModule',
+            'leadingUnderscore': 'requireDouble',
+          },
+        ],
       },
     },
   ],
-  rules: {
-    'import/extensions': 'off',
-    'arrow-body-style': 'off',
-    'arrow-parens': 'off',
-    'no-implicit-coercion': ['error', {
-      boolean: true,
-      number: true,
-      string: true,
-      allow: [],
-    }],
-    'prefer-destructuring': ['error', { object: true, array: false }],
-    'class-methods-use-this': 'off',
-    '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
-    curly: ['error', 'all'],
-    'import/first': 'error',
-    'import/newline-after-import': ['error', { count: 2 }],
-    'import/no-named-as-default': 'off',
-    'import/no-unresolved': 'off',
-    'import/no-webpack-loader-syntax': 'warn',
-    'import/order': ['error', {
-      groups: [['builtin', 'external'], ['internal'], ['index', 'sibling', 'parent']],
-      'newlines-between': 'always',
-    }],
-    'import/prefer-default-export': 'off',
-    '@typescript-eslint/indent': 'warn',
-    'jsx-a11y/anchor-is-valid': 'warn',
-    'jsx-a11y/aria-props': 'error',
-    'jsx-a11y/label-has-associated-control': ['error', {
-      required: {
-        some: ['nesting', 'id'],
+  'rules': {
+    '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        'selector': 'default',
+        'format': [
+          'camelCase',
+          'strictCamelCase',
+          'PascalCase',
+          'StrictPascalCase',
+          'snake_case',
+          'UPPER_CASE',
+        ],
+        'leadingUnderscore': 'allow',
+        'trailingUnderscore': 'allow',
       },
-    }],
-    'jsx-a11y/label-has-for': ['error', {
-      required: {
-        some: ['nesting', 'id'],
-      },
-    }],
-    'space-before-blocks': 'off',
-    '@typescript-eslint/space-before-blocks': 'off',
-    'no-unused-vars': 'off',
-    'unused-imports/no-unused-imports': 'error',
-    'unused-imports/no-unused-vars': [
-      'warn',
-      { 'vars': 'all', 'varsIgnorePattern': '^_', 'args': 'after-used', 'argsIgnorePattern': '^_' },
     ],
-    'jsx-a11y/mouse-events-have-key-events': 'warn',
-    'jsx-a11y/role-has-required-aria-props': 'error',
-    'jsx-a11y/role-supports-aria-props': 'error',
-    'max-len': ['error', { code: 120, ignoreStrings: true }],
-    'max-classes-per-file': 'off',
-    'newline-per-chained-call': 'off',
-    'no-console': 'error',
-    'no-lonely-if': 'off',
-    'no-multiple-empty-lines': ['error', { max: 2, maxBOF: 0 }],
-    'no-plusplus': 'off',
-    'no-restricted-imports': ['error', { patterns: ['../../../../*'] }],
-    'no-restricted-syntax': 'off',
-    'no-use-before-define': 'off',
-    'no-useless-escape': 'off',
-    'no-negated-condition': 'error',
-    'object-curly-newline': ['warn', { multiline: true, minProperties: 5, consistent: true }],
+    '@typescript-eslint/lines-between-class-members': 'off',
     'object-property-newline': 'off',
-    'prefer-const': 'warn',
+    'quote-props': 'off',
+    'yoda': [
+      'error',
+      'always',
+      {
+        'onlyEquality': true,
+      },
+    ],
+    'no-lonely-if': 'off',
+    'comma-dangle': [
+      'error',
+      {
+        'arrays': 'always-multiline',
+        'objects': 'always-multiline',
+        'imports': 'always-multiline',
+        'exports': 'always-multiline',
+        'functions': 'always-multiline',
+      },
+    ],
+    'indent': [
+      'error',
+      2,
+      {
+        'SwitchCase': 1,
+      },
+    ],
+    'no-console': 'error',
+    'max-len': [
+      'error',
+      {
+        'code': 120,
+        'ignorePattern': "import \\{?\\s?.*\\s?\\}? from '.*';",
+        'ignoreStrings': true,
+        'ignoreTemplateLiterals': true,
+      },
+    ],
     'prefer-template': 'error',
-    'react/destructuring-assignment': 'off',
-    'react/forbid-prop-types': 'warn',
-    'react/jsx-filename-extension': 'off',
-    'react/jsx-indent': 'warn',
-    'react/jsx-props-no-spreading': ['error', {
-      html: 'enforce',
-      custom: 'ignore',
-      exceptions: ['div', 'circle'],
-    }],
-    'react/state-in-constructor': ['off', 'always'],
-    'react/prop-types': 'off',
-    'react/static-property-placement': ['error', 'static public field'],
-    'react/no-array-index-key': 'off',
-    'react/prefer-stateless-function': 'off',
-    'react/require-default-props': 'off',
-    'react/require-extension': 'off',
-    'react/self-closing-comp': 'off',
-    'valid-jsdoc': 'error',
-    yoda: ['error', 'always', { onlyEquality: true }],
-    'no-underscore-dangle': 'off',
-    '@typescript-eslint/type-annotation-spacing': 'error',
-    '@typescript-eslint/no-unused-expressions': 'off',
+    'newline-per-chained-call': 'off',
+    'arrow-body-style': 'off',
+    'curly': [
+      'error',
+      'all',
+    ],
+    'object-curly-newline': 'off',
+    'valid-jsdoc': 'off',
+    'require-jsdoc': 'off',
+    'class-methods-use-this': 'off',
+    'arrow-parens': 'off',
+    'no-plusplus': 'off',
+    'no-restricted-syntax': 'off',
+    'no-useless-escape': 'warn',
+    'camelcase': 'off',
+    'max-classes-per-file': 'warn',
+    'no-multiple-empty-lines': [
+      'error',
+      {
+        'max': 2,
+        'maxBOF': 0,
+        'maxEOF': 0,
+      },
+    ],
+    'import/no-cycle': 'off',
+    'import/extensions': 'warn',
+    'import/first': [
+      2,
+      'disable-absolute-first',
+    ],
+    'import/newline-after-import': [
+      2,
+      {
+        'count': 2,
+      },
+    ],
     'import/no-extraneous-dependencies': 'off',
+    'import/no-webpack-loader-syntax': 'warn',
+    'import/order': [
+      2,
+      {
+        'groups': [
+          [
+            'builtin',
+            'external',
+          ],
+          [
+            'internal',
+          ],
+          [
+            'index',
+            'sibling',
+            'parent',
+          ],
+        ],
+        'newlines-between': 'always',
+      },
+    ],
+    'import/no-unresolved': 'off',
+    '@typescript-eslint/no-unused-expressions': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
         'argsIgnorePattern': '^_',
       },
     ],
-    '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
-    '@typescript-eslint/member-delimiter-style': ['error', {
-      multiline: { delimiter: 'comma', requireLast: true },
-      singleline: { delimiter: 'comma', requireLast: false },
-    }],
-    '@typescript-eslint/naming-convention': ['error',
-      { selector: 'default', format: ['camelCase', 'PascalCase', 'UPPER_CASE'] },
-      { selector: 'typeLike', format: ['PascalCase'] },
-      { selector: 'enum', format: ['UPPER_CASE'] },
-      { selector: 'property', format: ['camelCase', 'PascalCase', 'snake_case'] },
-      { selector: 'parameter', format: ['camelCase', 'PascalCase'] },
-      { selector: 'property', filter: { regex: '^__overlayScrollbars__$', match: true }, format: null },
-      { selector: 'parameter', filter: { regex: '^_$', match: true }, format: null },
+    'import/imports-first': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-named-as-default': 'off',
+    'import/no-named-as-default-member': 'off',
+    'jsx-a11y/label-has-for': [
+      2,
+      {
+        'components': [
+          'label',
+        ],
+        'required': {
+          'some': [
+            'nesting',
+            'id',
+          ],
+        },
+        'allowChildren': false,
+      },
     ],
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/mouse-events-have-key-events': 'off',
+    'jsx-a11y/role-has-required-aria-props': 'error',
+    'jsx-a11y/role-supports-aria-props': 'error',
+    'jsx-a11y/aria-props': 'error',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'react/prefer-stateless-function': 'off',
+    'react/jsx-filename-extension': 'off',
+    'react/self-closing-comp': 'off',
+    'react/require-extension': 'off',
+    'react/sort-comp': [
+      'warn',
+      {
+        'order': [
+          'static-methods',
+          'lifecycle',
+          'everything-else',
+          'rendering',
+        ],
+        'groups': {
+          'rendering': [
+            '/^render.+$/',
+            'render',
+          ],
+        },
+      },
+    ],
+    'react/destructuring-assignment': [
+      'warn',
+      'always',
+      {
+        'ignoreClassFields': true,
+      },
+    ],
+    'react/prop-types': 'off',
+    'react/require-default-props': 'off',
+    'react/default-props-match-prop-types': [
+      'error',
+      {
+        'allowRequiredDefaults': true,
+      },
+    ],
+    'react/forbid-prop-types': 'off',
+    'react/jsx-indent': 'warn',
+    'react/no-array-index-key': 'warn',
+    'react/jsx-fragments': [
+      'error',
+      'element',
+    ],
+    'react/jsx-props-no-spreading': 'off',
+    'react/static-property-placement': [
+      'error',
+      'static public field',
+    ],
+    'react/state-in-constructor': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    '@typescript-eslint/no-throw-literal': 'off',
+  },
+  'globals': {
+    'Generator': true,
   },
 };

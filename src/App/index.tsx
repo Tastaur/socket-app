@@ -3,17 +3,17 @@ import { StyledEngineProvider, ThemeProvider } from '@mui/material';
 import { BrowserRouter } from 'react-router-dom';
 
 import { ErrorBoundary } from '../components/common/ErrorBoundary';
-import { MainContainer } from '../containers/MainContainer';
+import { MainLayout } from '../components/MainLayout';
 import { theme } from '../theme';
 
 
 export const App = () => {
   return (
-      <BrowserRouter >
+      <BrowserRouter>
           <StyledEngineProvider injectFirst>
               <ThemeProvider theme={theme}>
                   <ErrorBoundary>
-                      <MainContainer/>
+                      <MainLayout/>
                   </ErrorBoundary>
               </ThemeProvider>
           </StyledEngineProvider>

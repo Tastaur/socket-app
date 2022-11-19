@@ -25,4 +25,3 @@ export interface CachedData {
   data: HistoryItem[],
   timestamp: number,
 }
-

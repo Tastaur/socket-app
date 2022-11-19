@@ -37,10 +37,6 @@ module.exports = webpackMerge(
             },
           },
         },
-        {
-          test: /\.js$/,
-          loader: 'webpack-remove-debug',
-        },
       ],
     },
   },

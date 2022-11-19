@@ -7,12 +7,12 @@ import BitcoinIcon from 'static/btc.png';
 import { BitcoinData } from 'context/WebSocketContext/types';
 
 
-const StyledDivider = styled(Divider)(({ theme }) =>({
+const StyledDivider = styled(Divider)(({ theme }) => ({
   marginLeft: theme.spacing(6),
   borderColor: 'rgb(0 0 0 / 4%)',
 }));
 
-type LeftHeaderSectionProps =  Pick<BitcoinData, 'lastUpdate'>;
+type LeftHeaderSectionProps = Pick<BitcoinData, 'lastUpdate'>;
 
 export const LeftHeaderSection: FC<LeftHeaderSectionProps> = ({ lastUpdate }) => {
   return (

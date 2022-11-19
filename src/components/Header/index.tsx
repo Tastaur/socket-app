@@ -1,8 +1,7 @@
 import React from 'react';
-import { Stack, styled } from '@mui/material';
+import { CircularProgress, Stack, styled } from '@mui/material';
 
-
-import { BitcoinData } from 'context/WebSocketContext/types';
+import { useWebSocketContext } from 'context/WebSocketContext';
 
 import { LeftHeaderSection } from './LeftHeaderSection';
 import { RightHeaderSection } from './RightHeaderSection';
@@ -13,23 +12,30 @@ const HeaderWrapper = styled(Stack)(({ theme }) => ({
   padding: theme.spacing(2, 4),
 }));
 
-export const Header = ({
-  last, percentChange, change,
-  lastUpdate, quoteSymbol,
-}: BitcoinData) => {
-  return (
-      <HeaderWrapper
-          aria-label={'header'}
-          direction={'row'}
-          justifyContent={'space-between'}
-      >
-          <LeftHeaderSection lastUpdate={lastUpdate}/>
-          <RightHeaderSection
-            last={last}
-            change={change}
-            percentChange={percentChange}
-            quoteSymbol={quoteSymbol}
-          />
-      </HeaderWrapper>
-  );
+export const Header = () => {
+  const { data, error, isLoading } = useWebSocketContext();
+  if (error) {
+    return <h2>Ooops!... something went wrong</h2>;
+  }
+  
+  return <HeaderWrapper
+      aria-label={'header'}
+      direction={'row'}
+      justifyContent={'space-between'}
+  >
+      {isLoading || !data ?
+        (
+            <CircularProgress/>
+        ) : (
+            <>
+                <LeftHeaderSection lastUpdate={data.lastUpdate}/>
+                <RightHeaderSection
+                  last={data.last}
+                  change={data.change}
+                  percentChange={data.percentChange}
+                  quoteSymbol={data.quoteSymbol}
+              />
+            </>
+        )}
+  </HeaderWrapper>;
 };

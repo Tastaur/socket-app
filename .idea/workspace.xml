@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ced6187-1425-42b1-aa59-fcc31a4104ce" name="Changes" comment="Add table">
-      <change afterPath="$PROJECT_DIR$/src/api/historyData/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Table/hooks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Table/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/constant.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/utils.ts" afterDir="false" />
+    <list default="true" id="5ced6187-1425-42b1-aa59-fcc31a4104ce" name="Changes" comment="ADD Charts">
+      <change afterPath="$PROJECT_DIR$/src/components/Overview/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Overview/lazy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Table/lazy.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/eslint/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/eslint/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack/config.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/config.prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack/optimiaztion/optimization.dev.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/optimiaztion/optimization.dev.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/webpack/plugins/plugins.config.dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack/plugins/plugins.config.dev.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/LeftHeaderSection/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/LeftHeaderSection/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/RightHeaderSection/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/RightHeaderSection/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PageTabs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageTabs/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PeriodTabs/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PeriodTabs/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/MainContainer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MainContainer/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PeriodTabs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PeriodTabs/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/hooks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/ErrorBoundary/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/ErrorBoundary/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/HeaderContainer/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/HeaderContainer/lazy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/lazy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/MainContainer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainLayout/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/constant.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context/WebSocketContext/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/WebSocketContext/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/WebSocketContext/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/WebSocketContext/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/globalConstant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/globalConstant.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,14 +83,14 @@
       <recent name="$PROJECT_DIR$/src/utils/parseJsonSafely" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/src/components/Header" />
       <recent name="$PROJECT_DIR$/src/context/WebSocketContext" />
       <recent name="$PROJECT_DIR$/src/containers/HeaderContainer" />
       <recent name="$PROJECT_DIR$/src/utils/parseJsonSafely" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test">
+  <component name="RunManager" selected="npm.ts">
     <configuration name="parseJsonSafely test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -144,9 +149,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test" />
         <item itemvalue="npm.ts" />
         <item itemvalue="npm.lint:fix" />
+        <item itemvalue="npm.test" />
         <item itemvalue="Jest.websocketContext utils test" />
         <item itemvalue="Jest.parseJsonSafely test" />
       </list>
@@ -168,6 +173,7 @@
       <workItem from="1668713654192" duration="13488000" />
       <workItem from="1668763745906" duration="608000" />
       <workItem from="1668765039279" duration="16948000" />
+      <workItem from="1668806040817" duration="12341000" />
     </task>
     <task id="LOCAL-00001" summary="setup boilerplate">
       <created>1668670986171</created>
@@ -204,7 +210,8 @@
     <MESSAGE value="setup boilerplate" />
     <MESSAGE value="Add header, add tabs, add routing, add tests, fix boilerplate" />
     <MESSAGE value="Add table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add table" />
+    <MESSAGE value="ADD Charts" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD Charts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

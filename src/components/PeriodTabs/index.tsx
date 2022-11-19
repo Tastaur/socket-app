@@ -21,11 +21,11 @@ export const PeriodTabs: FC<PeriodTabsProps> = ({ setCurrentPeriod, currentPerio
             onChange={(_, newValue) => setCurrentPeriod(newValue)}>
               {Object.values(PERIOD_TABS).map((item) => (
                   <Tab
-                    value={item}
-                   key={item}
-                   label={PERIOD_TABS_NAME_RECORD[item]}
-                   id={item}
-                   aria-controls={`tab-${item}`}/>
+                  value={item}
+                  key={item}
+                  label={PERIOD_TABS_NAME_RECORD[item]}
+                  id={item}
+                  aria-controls={`tab-${item}`}/>
               ))}
           </Tabs>
       </Box>

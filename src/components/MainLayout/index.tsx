@@ -1,16 +1,16 @@
 import React, { lazy, Suspense, useState } from 'react';
 import { CircularProgress, Stack, styled } from '@mui/material';
 
-import { PageTabs } from '../../components/PageTabs';
-import { PAGE_TABS } from '../../components/PageTabs/constants';
-import { PERIOD_TABS } from '../../components/PeriodTabs/constants';
-import { PeriodTabs } from '../../components/PeriodTabs';
-import { Content } from '../../components/Content';
+import { PageTabs } from '../PageTabs';
+import { PAGE_TABS } from '../PageTabs/constants';
+import { PERIOD_TABS } from '../PeriodTabs/constants';
+import { PeriodTabs } from '../PeriodTabs';
+import { Content } from '../Content';
 import { HistoryDataContext } from '../../context/HistoryDataContext';
 import { WebSocketContext } from '../../context/WebSocketContext';
 
 
-const Header = lazy(() => import('../HeaderContainer/lazy'));
+const Header = lazy(() => import('../Header/lazy'));
 
 const StyledWrapper = styled(Stack)(({ theme }) => ({
   padding: theme.spacing(2),
@@ -18,7 +18,7 @@ const StyledWrapper = styled(Stack)(({ theme }) => ({
   boxSizing: 'border-box',
 }));
 
-export const MainContainer = () => {
+export const MainLayout = () => {
   const [currentPage, setCurrentPage] = useState<PAGE_TABS>(PAGE_TABS.History);
   const [currentPeriod, setCurrentPeriod] = useState<PERIOD_TABS>(PERIOD_TABS.ONE_HOUR);
   return (
