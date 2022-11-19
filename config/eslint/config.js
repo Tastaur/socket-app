@@ -116,6 +116,7 @@ module.exports = {
     'no-plusplus': 'off',
     'no-restricted-syntax': 'off',
     'no-useless-escape': 'warn',
+    'react/jsx-props-no-multi-spaces': 'error',
     'camelcase': 'off',
     'max-classes-per-file': 'warn',
     'no-multiple-empty-lines': [
@@ -247,6 +248,8 @@ module.exports = {
     ],
     'react/state-in-constructor': 'off',
     'react-hooks/rules-of-hooks': 'error',
+    'react/jsx-curly-brace-presence': 2,
+    'react/jsx-boolean-value': 2,
     'react-hooks/exhaustive-deps': 'warn',
     '@typescript-eslint/no-throw-literal': 'off',
     '@typescript-eslint/space-before-blocks': ['error', {

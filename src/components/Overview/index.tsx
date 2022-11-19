@@ -41,17 +41,18 @@ export const Overview = () => {
     return data.map(item => ({ ...item, Date: getCurrentDateFormat(item.Date, currentPeriod) }));
   }, [data, currentPeriod]);
   return (
-    <Box width={'100%'} height={'100%'}>
+    <Box width="100%" height="100%">
       <ResponsiveContainer aspect={3}>
         <AreaChart
           data={formattedData}
           margin={{ top: 20, right: 0, left: 20, bottom: 0 }}>
           <XAxis dataKey="Date" interval={1}/>
-          <YAxis orientation={'right'} width={80}/>
+          <YAxis orientation="right" tickCount={20} width={80} from={0}/>
           <Tooltip/>
-          <ReferenceLine y={maxValue} stroke="rgb(80, 126, 17)"
+          <ReferenceLine y={maxValue} stroke={theme.palette.success.main}
             label={<CustomLabel text={maxValue}/>}
-            strokeDasharray="3 3"
+            strokeDasharray="4 2"
+            strokeWidth={2}
           />
           <Area
             type="linear"

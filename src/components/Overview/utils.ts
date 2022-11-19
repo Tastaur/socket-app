@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 
 import { PERIOD_TABS } from '../PeriodTabs/constants';
-import { DATE_FORMAT_BY_PERIOD } from '../../context/HistoryDataContext/constant';
+import { DATE_FORMAT_BY_PERIOD } from './constant';
 
 
 export const getCurrentDateFormat = (date: string, period: PERIOD_TABS) => {

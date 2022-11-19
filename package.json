@@ -67,6 +67,7 @@
   "dependencies": {
     "@emotion/react": "11.10.5",
     "@emotion/styled": "11.10.5",
+    "@fontsource/roboto": "^4.5.8",
     "@mui/icons-material": "5.10.14",
     "@mui/material": "5.10.14",
     "@mui/styled-engine-sc": "5.10.14",
@@ -78,7 +79,6 @@
     "react-dom": "17.0.2",
     "react-router-dom": "5.3.0",
     "recharts": "2.1.16",
-    "socket.io-client": "4.5.3",
     "styled-components": "5.3.6"
   }
 }

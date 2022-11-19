@@ -8,7 +8,6 @@ export interface HistoryItem {
   High: number,
   Low: number,
   Open: number,
-  Volume: number,
 }
 
 export interface WithData {

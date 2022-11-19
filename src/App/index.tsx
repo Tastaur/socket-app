@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StyledEngineProvider, ThemeProvider } from '@mui/material';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -9,6 +9,11 @@ import { GlobalOverride } from '../components/GlobalOverride';
 
 
 export const App = () => {
+  useEffect(() => {
+    const loading = document.getElementById('loading');
+    loading?.remove();
+  }, []);
+  
   return (
     <BrowserRouter>
       <StyledEngineProvider injectFirst>

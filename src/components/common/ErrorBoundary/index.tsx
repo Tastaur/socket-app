@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react';
-import { Typography } from '@mui/material';
+import React from 'react';
+
+import { ErrorPage } from '../ErrorPage';
 
 
 export interface IProps {
@@ -18,7 +19,7 @@ export class ErrorBoundary extends React.Component<IProps, State> {
     errorMessage: '',
     stackTrace: '',
   };
-    
+  
   componentDidCatch(error: Error, info: React.ErrorInfo){
     this.setState({
       hasError: true,
@@ -26,24 +27,14 @@ export class ErrorBoundary extends React.Component<IProps, State> {
       stackTrace: info.componentStack.trim().split(/\r?\n/).map(str => str.trim()).join('\n'),
     });
   }
-    
+  
   renderError(){
     const { errorMessage, stackTrace } = this.state;
     return (
-      <Fragment>
-        <Typography>
-          Something went wrong...
-        </Typography>
-        <Typography>
-          {errorMessage}
-        </Typography>
-        <Typography>
-          {stackTrace}
-        </Typography>
-      </Fragment>
+      <ErrorPage message={errorMessage} stack={stackTrace}/>
     );
   }
-    
+  
   render(){
     const { children } = this.props;
     const { hasError } = this.state;
@@ -52,5 +43,5 @@ export class ErrorBoundary extends React.Component<IProps, State> {
     }
     return children;
   }
-    
+  
 }

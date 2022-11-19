@@ -19,25 +19,25 @@ export const RightHeaderSection: FC<RightHeaderSectionProps> = ({
   quoteSymbol,
 }) => {
   const isPositive = percentChange > 0 && change > 0;
-  const currentTypographyColor = isPositive ? 'success' : 'error';
+  const currentColor = isPositive ? 'success.main' : 'error';
   const sign = isPositive ? '+' : '';
   return (
     <Stack direction='column'>
       <Stack gap={2} direction='row' justifyContent='space-between'>
-        <Typography color={currentTypographyColor} variant={'h3'}>
+        <Typography color={currentColor} variant="h3">
           {isPositive
-            ? <ArrowDropUpSharpIcon fontSize={'inherit'} color={currentTypographyColor}/>
-            : <ArrowDropDownSharpIcon fontSize={'inherit'} color={currentTypographyColor}/>}
+            ? <ArrowDropUpSharpIcon fontSize="inherit" color="inherit"/>
+            : <ArrowDropDownSharpIcon fontSize="inherit" color="inherit"/>}
         </Typography>
         <Typography variant='h3'>
           {`${quoteSymbol}${last.toFixed(2)}`}
         </Typography>
       </Stack>
       <SubtitlePrice direction='row' justifyContent='space-between' gap={1}>
-        <Typography variant='h5' color={currentTypographyColor}>
+        <Typography variant='h5' color={currentColor}>
           {`${sign}${change.toFixed(2)}`}
         </Typography>
-        <Typography variant='h5' color={currentTypographyColor}>
+        <Typography variant='h5' color={currentColor}>
           {`(${sign}${percentChange.toFixed(2)}%)`}
         </Typography>
       </SubtitlePrice>

@@ -2,9 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ced6187-1425-42b1-aa59-fcc31a4104ce" name="Changes" comment="Add some fixes">
+      <change afterPath="$PROJECT_DIR$/src/components/Overview/_test/utils.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Overview/constant.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/ErrorPage/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/_test/utils.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/eslint/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/eslint/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/LeftHeaderSection/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/LeftHeaderSection/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/RightHeaderSection/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/RightHeaderSection/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Overview/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Overview/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Overview/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Overview/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PageTabs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageTabs/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/ErrorBoundary/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/ErrorBoundary/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/constant.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +34,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -32,29 +51,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.14.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.3&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/tastaur/Documents/pet/app-socket/src/context&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;/home/tastaur/Documents/pet/app-socket/node_modules/jest&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;/home/tastaur/.nvm/versions/node/v16.14.0/bin/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/tastaur/Documents/pet/app-socket/node_modules/typescript/lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "javascript.nodejs.core.library.configured.version": "16.14.0",
+    "javascript.nodejs.core.library.typings.version": "16.18.3",
+    "last_opened_file_path": "/home/tastaur/Documents/pet/app-socket/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/home/tastaur/Documents/pet/app-socket/node_modules/jest",
+    "nodejs_interpreter_path": "/home/tastaur/.nvm/versions/node/v16.14.0/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "/home/tastaur/Documents/pet/app-socket/node_modules/typescript/lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/context" />
       <recent name="$PROJECT_DIR$/src/containers" />
       <recent name="$PROJECT_DIR$/src/utils/parseJsonSafely" />
@@ -68,14 +88,44 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.lint:fix">
-    <configuration name="lint:eslint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="lint:eslint" />
-      </scripts>
+    <configuration name="HistoryDataContext utils test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
       <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/context/HistoryDataContext/_test/utils.test.ts" />
+      <test-names>
+        <test-name value="HistoryDataContext utils test" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="HistoryDataContext utils test.should return data" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/context/HistoryDataContext/_test/utils.test.ts" />
+      <test-names>
+        <test-name value="HistoryDataContext utils test" />
+        <test-name value="should return data" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="overview component utils" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/components/Overview/_test/utils.test.ts" />
+      <test-names>
+        <test-name value="overview component utils" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -83,16 +133,6 @@
       <command value="run" />
       <scripts>
         <script value="lint:fix" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -108,23 +148,13 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="ts" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="ts" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="npm.lint:fix" />
+        <item itemvalue="Jest.HistoryDataContext utils test" />
+        <item itemvalue="Jest.HistoryDataContext utils test.should return data" />
+        <item itemvalue="Jest.overview component utils" />
         <item itemvalue="npm.test" />
-        <item itemvalue="npm.ts" />
-        <item itemvalue="npm.lint:eslint" />
-        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +194,8 @@
       <workItem from="1668851949577" duration="85000" />
       <workItem from="1668852045040" duration="47000" />
       <workItem from="1668852103912" duration="4397000" />
-      <workItem from="1668857030302" duration="13101000" />
+      <workItem from="1668857030302" duration="13420000" />
+      <workItem from="1668883530844" duration="5575000" />
     </task>
     <task id="LOCAL-00001" summary="setup boilerplate">
       <created>1668670986171</created>
@@ -208,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668871609507</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add some fixes">
+      <created>1668872755441</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668872755441</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +278,12 @@
           <url>file://$PROJECT_DIR$/src/utils/parseJsonSafely/_test/parseJsonSafely.test.ts</url>
           <line>3</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/PageTabs/index.tsx</url>
+          <line>11</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

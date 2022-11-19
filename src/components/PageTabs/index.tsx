@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, styled, Tab, Tabs } from '@mui/material';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router';
 
 import { PAGE_TAB_NAME, PAGE_TABS } from './constants';
@@ -13,7 +13,6 @@ const TabsWrapper = styled(Box)(({ theme }) => ({
 
 
 export const PageTabs = () => {
-  const history = useHistory();
   const location = useLocation();
   return (
     <TabsWrapper>
@@ -22,9 +21,6 @@ export const PageTabs = () => {
           <Tab
             component={Link}
             to={item}
-            onClick={() => {
-              history.push(item);
-            }}
             value={item}
             key={item}
             label={PAGE_TAB_NAME[item]}
