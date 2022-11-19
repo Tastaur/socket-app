@@ -33,10 +33,13 @@ export const Table = () => {
     headerName: key,
     flex: 1,
   }));
-  const formattedData = data.map(item=> ({
-    ...item,
-    Date: format(new Date(item.Date), 'MMM dd, yyyy k:mm'),
-  }));
+  const formattedData = data.map(item => {
+    const date = new Date(item.Date);
+    return {
+      ...item,
+      Date: format(date, 'MMM dd, yyyy k:mm'),
+    };
+  });
   return (
     <StyledBox>
       <DataGrid<HistoryItem>
@@ -45,7 +48,7 @@ export const Table = () => {
         showCellRightBorder={false}
         disableColumnMenu
         disableColumnFilter
-        getRowId={(row) => new Date(row.Date).toISOString()} columns={columns} rows={formattedData}
+        getRowId={() => Math.random() * 10000} columns={columns} rows={formattedData}
       />
     </StyledBox>
   );

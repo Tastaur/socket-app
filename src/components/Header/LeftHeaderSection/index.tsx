@@ -15,6 +15,7 @@ const StyledDivider = styled(Divider)(({ theme }) => ({
 type LeftHeaderSectionProps = Pick<BitcoinData, 'lastUpdate'>;
 
 export const LeftHeaderSection: FC<LeftHeaderSectionProps> = ({ lastUpdate }) => {
+  const lastDate = new Date(lastUpdate);
   return (
     <Stack direction='column' gap={1} width={'20%'}>
       <Stack direction={'row'} spacing={1} alignItems='center'>
@@ -26,7 +27,7 @@ export const LeftHeaderSection: FC<LeftHeaderSectionProps> = ({ lastUpdate }) =>
       <StyledDivider variant="middle" orientation={'horizontal'}/>
       <Box>
         <Typography variant='subtitle1' color="textSecondary">
-          As of: {format(new Date(lastUpdate), 'MMM dd, yyyy k:mm OOOO')}
+          As of: {format(lastDate, 'MMM dd, yyyy k:mm OOOO')}
         </Typography>
       </Box>
     </Stack>
