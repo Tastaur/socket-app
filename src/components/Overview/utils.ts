@@ -10,6 +10,6 @@ export const getCurrentDateFormat = (date: string, period: PERIOD_TABS) => {
     return format(currentDate, DATE_FORMAT_BY_PERIOD[period]);
   }
   
-  const currentPeriod = 0 === currentDate.getHours() ? 'dd/MM' : DATE_FORMAT_BY_PERIOD[period];
+  const currentPeriod = (0 || 1) === currentDate.getHours() ? 'dd/MM' : DATE_FORMAT_BY_PERIOD[period];
   return format(currentDate, currentPeriod);
 };
