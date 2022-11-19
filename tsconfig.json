@@ -29,6 +29,7 @@
     "forceConsistentCasingInFileNames": true,
     "target": "es6",
     "noUncheckedIndexedAccess": true,
+    "sourceMap": true,
     "strictPropertyInitialization": false,
     "noEmitOnError": false
   }

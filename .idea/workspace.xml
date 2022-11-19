@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ced6187-1425-42b1-aa59-fcc31a4104ce" name="Changes" comment="Add types">
+    <list default="true" id="5ced6187-1425-42b1-aa59-fcc31a4104ce" name="Changes" comment="Fix imports">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MainLayout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainLayout/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Overview/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Overview/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PeriodTabs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PeriodTabs/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Table/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/constant.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/WebSocketContext/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/WebSocketContext/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/WebSocketContext/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/WebSocketContext/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +50,7 @@
     "nodejs_interpreter_path": "/home/tastaur/.nvm/versions/node/v16.14.0/bin/node",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "/home/tastaur/Documents/pet/app-socket/node_modules/typescript/lib"
+    "ts.external.directory.path": "/snap/webstorm/281/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -76,7 +68,7 @@
       <recent name="$PROJECT_DIR$/src/utils/parseJsonSafely" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.lint:fix">
+  <component name="RunManager" selected="npm.build">
     <configuration name="HistoryDataContext utils test" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -90,31 +82,14 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="HistoryDataContext utils test.should return data" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
       <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/context/HistoryDataContext/_test/utils.test.ts" />
-      <test-names>
-        <test-name value="HistoryDataContext utils test" />
-        <test-name value="should return data" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="overview component utils" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/src/components/Overview/_test/utils.test.ts" />
-      <test-names>
-        <test-name value="overview component utils" />
-      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="lint:fix" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -137,13 +112,23 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="ts" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ts" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.lint:fix" />
-        <item itemvalue="Jest.HistoryDataContext utils test" />
-        <item itemvalue="Jest.HistoryDataContext utils test.should return data" />
-        <item itemvalue="Jest.overview component utils" />
         <item itemvalue="npm.test" />
+        <item itemvalue="npm.ts" />
+        <item itemvalue="Jest.HistoryDataContext utils test" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +169,7 @@
       <workItem from="1668852045040" duration="47000" />
       <workItem from="1668852103912" duration="4397000" />
       <workItem from="1668857030302" duration="13420000" />
-      <workItem from="1668883530844" duration="7174000" />
+      <workItem from="1668883530844" duration="8099000" />
     </task>
     <task id="LOCAL-00001" summary="setup boilerplate">
       <created>1668670986171</created>
@@ -249,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668890410597</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix imports">
+      <created>1668890751605</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668890751605</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +265,8 @@
     <MESSAGE value="ADD Charts" />
     <MESSAGE value="Add some fixes" />
     <MESSAGE value="Add types" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add types" />
+    <MESSAGE value="Fix imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix imports" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
