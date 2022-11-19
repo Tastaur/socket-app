@@ -1,13 +1,13 @@
 import React, {
   createContext, FC, useCallback, useContext, useEffect, useState,
 } from 'react';
+import { Nullable } from 'globalTypes';
+import { PERIOD_TABS } from 'components/PeriodTabs/constants';
+import { getHistoryDataApi } from 'api/historyData';
+import { APP_PREFIX } from 'globalConstant';
 
-import { Nullable } from '../../globalTypes';
-import { CachedData, HistoryContextResponse, HistoryItem } from './types';
-import { PERIOD_TABS } from '../../components/PeriodTabs/constants';
-import { getHistoryDataApi } from '../../api/historyData';
 import { HISTORY_ROUTS_BY_PERIOD } from './constant';
-import { APP_PREFIX } from '../../globalConstant';
+import { CachedData, HistoryContextResponse, HistoryItem } from './types';
 import { validateCachedData } from './utils';
 
 

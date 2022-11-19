@@ -2,8 +2,8 @@ import React, { useMemo } from 'react';
 import { Area, AreaChart, ReferenceLine, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { Box, useTheme } from '@mui/material';
 import { CartesianViewBox } from 'recharts/src/util/types';
+import { useHistoryDataContext } from 'context/HistoryDataContext';
 
-import { useHistoryDataContext } from '../../context/HistoryDataContext';
 import { getCurrentDateFormat } from './utils';
 
 

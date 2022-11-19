@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { Box, Tab, Tabs, useTheme } from '@mui/material';
+import { useHistoryDataContext } from 'context/HistoryDataContext';
 
 import { PERIOD_TABS, PERIOD_TABS_NAME_RECORD } from './constants';
-import { useHistoryDataContext } from '../../context/HistoryDataContext';
 
 
 export const PeriodTabs: FC = () => {

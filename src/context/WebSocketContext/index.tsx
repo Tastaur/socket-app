@@ -1,9 +1,9 @@
 import React, { createContext, FC, useContext, useEffect, useState } from 'react';
+import { Nullable } from 'globalTypes';
+import { bitcoinKey, WEB_SOCKET_MESSAGE, WEB_SOCKET_URL } from 'globalConstant';
+import { parseJsonSafely } from 'utils';
 
-import { Nullable } from '../../globalTypes';
 import { getSocketMessage } from './utils';
-import { bitcoinKey, WEB_SOCKET_MESSAGE, WEB_SOCKET_URL } from '../../globalConstant';
-import { parseJsonSafely } from '../../utils';
 import { BitcoinData, WebSocketContextInterface } from './types';
 
 

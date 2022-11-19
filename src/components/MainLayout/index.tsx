@@ -1,11 +1,11 @@
 import React, { lazy, Suspense } from 'react';
 import { CircularProgress, Stack, styled } from '@mui/material';
+import { HistoryDataContext } from 'context/HistoryDataContext';
+import { WebSocketContext } from 'context/WebSocketContext';
 
 import { PageTabs } from '../PageTabs';
 import { PeriodTabs } from '../PeriodTabs';
 import { Content } from '../Content';
-import { HistoryDataContext } from '../../context/HistoryDataContext';
-import { WebSocketContext } from '../../context/WebSocketContext';
 
 
 const Header = lazy(() => import('../Header/lazy'));

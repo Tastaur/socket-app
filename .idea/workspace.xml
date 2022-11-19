@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ced6187-1425-42b1-aa59-fcc31a4104ce" name="Changes" comment="Add some fixes">
+    <list default="true" id="5ced6187-1425-42b1-aa59-fcc31a4104ce" name="Changes" comment="Add types">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainLayout/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainLayout/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Overview/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Overview/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PeriodTabs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PeriodTabs/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Table/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/constant.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/constant.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/HistoryDataContext/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/HistoryDataContext/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/WebSocketContext/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/WebSocketContext/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/WebSocketContext/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/WebSocketContext/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +184,7 @@
       <workItem from="1668852045040" duration="47000" />
       <workItem from="1668852103912" duration="4397000" />
       <workItem from="1668857030302" duration="13420000" />
-      <workItem from="1668883530844" duration="6348000" />
+      <workItem from="1668883530844" duration="7174000" />
     </task>
     <task id="LOCAL-00001" summary="setup boilerplate">
       <created>1668670986171</created>
@@ -232,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668889197125</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add types">
+      <created>1668890410597</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668890410597</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +272,8 @@
     <MESSAGE value="Add table" />
     <MESSAGE value="ADD Charts" />
     <MESSAGE value="Add some fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some fixes" />
+    <MESSAGE value="Add types" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add types" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

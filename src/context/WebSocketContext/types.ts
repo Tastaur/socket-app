@@ -1,4 +1,4 @@
-import { Nullable } from '../../globalTypes';
+import { Nullable } from 'globalTypes';
 
 
 export interface BitcoinData {

@@ -1,6 +1,7 @@
+import { GetHistoryDataApiPayload } from 'api/historyData';
+import { hourInMillisecond, minuteInMillisecond, weekInMillisecond } from 'globalConstant';
+
 import { PERIOD_TABS } from '../../components/PeriodTabs/constants';
-import { GetHistoryDataApiPayload } from '../../api/historyData';
-import { hourInMillisecond, minuteInMillisecond, weekInMillisecond } from '../../globalConstant';
 
 
 export const HISTORY_RANGE_ROUTE = {

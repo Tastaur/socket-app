@@ -3,10 +3,9 @@ import { Box, styled } from '@mui/material';
 import { DataGrid, gridClasses, GridColDef } from '@mui/x-data-grid';
 import { alpha } from '@mui/material/styles';
 import { format } from 'date-fns';
-
-import { HistoryItem } from '../../context/HistoryDataContext/types';
-import { useHistoryDataContext } from '../../context/HistoryDataContext';
-import { tableKeys } from '../../globalConstant';
+import { HistoryItem } from 'context/HistoryDataContext/types';
+import { useHistoryDataContext } from 'context/HistoryDataContext';
+import { tableKeys } from 'globalConstant';
 
 
 type CustomColumns = Omit<GridColDef, 'field' | 'headerName'> & {

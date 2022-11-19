@@ -1,8 +1,8 @@
 import React, { lazy, Suspense } from 'react';
 import { Redirect, Route, Switch } from 'react-router';
 import { CircularProgress } from '@mui/material';
+import { useHistoryDataContext } from 'context/HistoryDataContext';
 
-import { useHistoryDataContext } from '../../context/HistoryDataContext';
 import { ErrorPage } from '../common/ErrorPage';
 
 
