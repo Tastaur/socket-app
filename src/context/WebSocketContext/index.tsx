@@ -37,10 +37,10 @@ export const WebSocketContext: FC = ({
       setData(null);
       setError(new Error('error in connection'));
     };
-    const listener = (e) => {
+    const listener = (e:MessageEvent<string>) => {
       setData(parseJsonSafely(e.data, {})[bitcoinKey]);
     };
-    const errorListener = (e) => {
+    const errorListener = (e:Event) => {
       // eslint-disable-next-line no-console
       console.error(e);
       setError(new Error('Error listener'));
